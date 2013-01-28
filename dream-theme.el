@@ -77,7 +77,7 @@
     '(trailing-whitespace ((t (:inherit font-lock-warning))))
     `(link ((t (:foreground ,dt-blue-3 :underline t))))
     `(border ((t (:background ,dt-bg))))
-    `(button ((t (:foreground ,dt-yellow :background ,dt-green+4
+    `(button ((t (:foreground ,dt-yellow :background ,dt-blue-5
 		   :weight bold :underline t))))
     `(cursor ((t (:background ,dt-yellow :foreground ,dt-yellow))))
     `(minibuffer-prompt ((t (:foreground ,dt-blue))))
