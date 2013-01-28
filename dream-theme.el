@@ -23,6 +23,7 @@
 
 ;; my palette
 (let ( (dt-fg		"#dcdccc")
+       (dt-bg-2         "#232923")
        (dt-bg-1		"#2f2f2f")
        (dt-bg		"#151515")
        (dt-bg+1		"#202020")
@@ -59,30 +60,29 @@
   (custom-theme-set-faces
     'dream
     ;; basics
-
     `(default ((t (:background ,dt-bg :foreground ,dt-fg))))
     '(fixed-pitch ((t (:weight bold))))
     '(italic ((t (:slant italic))))
     '(underline ((t (:underline t))))
     '(fringe ((t (:inherit 'default))))
-    `(header-line ((t (:box (:color "#2e3330" :line-width 2)
+    `(header-line ((t (:box (:color ,dt-bg-1 :line-width 2)
 			:weight bold :foreground ,dt-blue-1))))
     '(highlight ((t (:weight bold :underline t ))))
-    '(hover-highlight ((t (:underline t :foreground "#f8f893"))))
+    `(hover-highlight ((t (:underline t :foreground ,dt-yellow))))
     '(match ((t (:weight bold))))
-    `(menu ((t (:background "#1e2320"))))
+    `(menu ((t (:background ,dt-bg+3))))
     `(mode-line-inactive ((t (:background ,dt-green-4 :box (:line-width 2)))))
     '(mouse ((t (:inherit dt-foreground))))
     '(paren ((t (:inherit dt-lowlight-1))))
     '(trailing-whitespace ((t (:inherit font-lock-warning))))
     `(link ((t (:foreground ,dt-blue-3 :underline t))))
     `(border ((t (:background ,dt-bg))))
-    `(button ((t (:foreground ,dt-yellow :background "#506070"
+    `(button ((t (:foreground ,dt-yellow :background ,dt-green+4
 		   :weight bold :underline t))))
     `(cursor ((t (:background ,dt-yellow :foreground ,dt-yellow))))
     `(minibuffer-prompt ((t (:foreground ,dt-blue))))
-    `(mode-line ((t (:foreground ,dt-yellow :background "#1e2320"
-		      :box (:color "#1e2320" :line-width 2)))))
+    `(mode-line ((t (:foreground ,dt-yellow :background ,dt-green-4
+		      :box (:color ,dt-bg+3 :line-width 2)))))
     `(region ((t (:foreground nil :background ,dt-bg+2))))
     `(scroll-bar ((t (:background ,dt-bg+2))))
     `(secondary-selection ((t (:foreground nil :background ,dt-bg+2))))
@@ -126,7 +126,7 @@
     `(font-lock-operator-face ((t (:foreground ,dt-blue-1))))
 
     ;; hlline
-    `(hl-line ((t (:foreground nil :background ,dt-bg+1))))
+    `(hl-line ((t (:foreground nil :background ,dt-bg-2))))
 
     ;; message-mode
     `(message-cited-text-face ((t (:inherit font-lock-comment))))
@@ -144,6 +144,20 @@
     ;; linum
     `(linum ((t (:foreground ,dt-yellow-3 :height .8))))
 
+    ;; rainbow-delimiters
+    `(rainbow-delimiters-depth-1-face ((t (:foreground ,dt-cyan))))
+    `(rainbow-delimiters-depth-2-face ((t (:foreground ,dt-yellow))))
+    `(rainbow-delimiters-depth-3-face ((t (:foreground ,dt-blue+1))))
+    `(rainbow-delimiters-depth-4-face ((t (:foreground ,dt-red+1))))
+    `(rainbow-delimiters-depth-5-face ((t (:foreground ,dt-green+1))))
+    `(rainbow-delimiters-depth-6-face ((t (:foreground ,dt-blue-1))))
+    `(rainbow-delimiters-depth-7-face ((t (:foreground ,dt-orange))))
+    `(rainbow-delimiters-depth-8-face ((t (:foreground ,dt-magenta))))
+    `(rainbow-delimiters-depth-9-face ((t (:foreground ,dt-yellow-2))))
+    `(rainbow-delimiters-depth-10-face ((t (:foreground ,dt-green+2))))
+    `(rainbow-delimiters-depth-11-face ((t (:foreground ,dt-blue+1))))
+    `(rainbow-delimiters-depth-12-face ((t (:foreground ,dt-red-4))))
+    
     ))
 
 (provide-theme 'dream)
