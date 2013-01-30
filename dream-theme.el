@@ -64,33 +64,34 @@
     '(fixed-pitch ((t (:weight bold))))
     '(italic ((t (:slant italic))))
     '(underline ((t (:underline t))))
-    '(fringe ((t (:inherit 'default))))
+    `(fringe ((t (:background ,dt-bg-1))))
     `(header-line ((t (:box (:color ,dt-bg-1 :line-width 2)
-			:weight bold :foreground ,dt-blue-1))))
-    '(highlight ((t (:weight bold :underline t ))))
-    `(hover-highlight ((t (:underline t :foreground ,dt-yellow))))
+			:weight bold :foreground ,dt-blue-1 :background ,dt-green-4))))
+    `(highlight ((t (:weight bold :underline t :background nil :foreground ,dt-orange))))
+    `(hover-highlight ((t (:underline t :foreground nil :background ,dt-green))))
     '(match ((t (:weight bold))))
     `(menu ((t (:background ,dt-bg+3))))
-    `(mode-line-inactive ((t (:background ,dt-green-4 :box (:line-width 2)))))
+    `(mode-line ((t (:foreground nil :background ,dt-green-4
+		      :box (:color ,dt-bg-1 :line-width 2)))))
+    `(mode-line-inactive ((t  (:inherit mode-line :background ,dt-green))))
     '(mouse ((t (:inherit dt-foreground))))
     '(paren ((t (:inherit dt-lowlight-1))))
     '(trailing-whitespace ((t (:inherit font-lock-warning))))
-    `(link ((t (:foreground ,dt-blue-3 :underline t))))
+    `(link ((t (:foreground ,dt-blue-3 :background nil :underline t))))
     `(border ((t (:background ,dt-bg))))
     `(button ((t (:foreground ,dt-yellow :background ,dt-blue-5
 		   :weight bold :underline t))))
-    `(cursor ((t (:background ,dt-yellow :foreground ,dt-yellow))))
-    `(minibuffer-prompt ((t (:foreground ,dt-blue))))
-    `(mode-line ((t (:foreground ,dt-yellow :background ,dt-green-4
-		      :box (:color ,dt-bg+3 :line-width 2)))))
+    `(cursor ((t (:background ,dt-yellow :foreground nil))))
+    `(minibuffer-prompt ((t (:foreground ,dt-red :weight bold :background ,dt-bg-1))))
     `(region ((t (:foreground nil :background ,dt-bg+2))))
     `(scroll-bar ((t (:background ,dt-bg+2))))
     `(secondary-selection ((t (:foreground nil :background ,dt-bg+2))))
     `(tool-bar ((t (:background ,dt-bg+2))))
 
     ;; erc
-    '(erc-action-face ((t (:inherit erc-default))))
+    `(erc-action-face ((t (:foreground ,dt-red-1 :slant italic))))
     '(erc-bold-face ((t (:weight bold))))
+    `(erc-button ((t (:foreground ,dt-blue :background nil :underline t))))
     `(erc-current-nick-face ((t (:foreground ,dt-yellow))))
     '(erc-dangerous-host-face ((t (:inherit font-lock-warning))))
     '(erc-direct-msg-face ((t (:inherit erc-default))))
@@ -128,6 +129,23 @@
     ;; hlline
     `(hl-line ((t (:foreground nil :background ,dt-bg-2))))
 
+    ;; info
+    `(info-xref ((t (:foreground ,dt-yellow :weight bold))))
+    '(info-xref-visited ((t (:inherit info-xref :weight normal))))
+    '(info-header-xref ((t (:inherit info-xref))))
+    `(info-menu-star ((t (:foreground ,dt-orange :weight normal))))
+    `(info-menu-5 ((t (:inherit info-menu-star))))
+    `(info-title-1 ((t (:foreground ,dt-blue :background nil :weight bold :height 1.2))))
+    `(info-title-2 ((t (:foreground ,dt-blue :background nil :weight bold :height 1.1))))
+    `(info-menu-header ((t (:weight normal :foreground ,dt-blue :height 1.2))))
+    '(info-node ((t (:weight bold))))
+    '(info-header-node ((t (:weight normal))))
+
+    ;; magit
+    `(magit-section-title ((t (:foreground ,dt-red :height 1.1 :weight normal))))
+    `(magit-item-highlight ((t (:foreground ,dt-blue :background ,dt-bg-1 :underline t))))
+    `(magit-branch ((t (:foreground ,dt-green :background ,dt-bg-1 :box nil))))
+    
     ;; message-mode
     `(message-cited-text-face ((t (:inherit font-lock-comment))))
     `(message-header-name-face ((t (:foregrond ,dt-green+1 :weight bold))))
@@ -142,8 +160,8 @@
     `(message-separator-face ((t (:foreground ,dt-green :background ,dt-bg+3))))
 
     ;; linum
-    `(linum ((t (:foreground ,dt-yellow-3 :height .8))))
-
+    `(linum ((t (:foreground ,dt-yellow-3 :background ,dt-bg :height .8))))
+     
     ;; rainbow-delimiters
     `(rainbow-delimiters-depth-1-face ((t (:foreground ,dt-cyan))))
     `(rainbow-delimiters-depth-2-face ((t (:foreground ,dt-yellow))))
@@ -157,6 +175,11 @@
     `(rainbow-delimiters-depth-10-face ((t (:foreground ,dt-green+2))))
     `(rainbow-delimiters-depth-11-face ((t (:foreground ,dt-blue+1))))
     `(rainbow-delimiters-depth-12-face ((t (:foreground ,dt-red-4))))
+
+    ;; show-paren
+    `(show-paren-mismatch ((t (:foreground ,dt-yellow :weight bold))))
+    `(show-paren-match ((t (:foreground ,nil :background ,dt-bg-1
+			     :underline t :weight bold))))
     
     ))
 
