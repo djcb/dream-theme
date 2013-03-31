@@ -75,7 +75,7 @@
     `(menu ((t (:background ,dt-bg+3))))
     `(mode-line ((t (:foreground nil :background ,dt-green-4
 		      :box (:color ,dt-bg-1 :line-width 2)))))
-    `(mode-line-inactive ((t  (:inherit mode-line :background ,dt-green))))
+    `(mode-line-inactive ((t  (:inherit mode-line :background ,dt-green-1))))
     '(mouse ((t (:inherit dt-foreground))))
     '(paren ((t (:inherit dt-lowlight-1))))
     '(trailing-whitespace ((t (:inherit font-lock-warning))))
@@ -103,7 +103,7 @@
     `(erc-keyword-face ((t (:foreground ,dt-red :weight bold))))
     `(erc-my-nick-face ((t (:foreground ,dt-red :weight bold))))
     `(erc-nick-default-face ((t (:foreground ,dt-blue))))
-    '(erc-nick-msg-face ((t (:inherit erc-default))))
+    `(erc-nick-msg-face ((t (:foreground ,dt-yellow-1))))
     `(erc-notice-face ((t (:foreground ,dt-green))))
     `(erc-pal-face ((t (:foreground ,dt-blue))))
     `(erc-prompt-face ((t (:weight bold :foreground ,dt-yellow))))
@@ -171,6 +171,12 @@
     ;; linum
     `(linum ((t (:foreground ,dt-yellow-3 :background ,dt-bg :height .8))))
 
+    ;; one-key
+    `(one-key-name ((t (:foreground ,dt-yellow))))
+    `(one-key-keystroke ((t (:foreground ,dt-red))))
+    `(one-key-prompt ((t (:foreground ,dt-green))))
+    
+    
     ;; rainbow-delimiters
     `(rainbow-delimiters-depth-1-face ((t (:foreground ,dt-cyan))))
     `(rainbow-delimiters-depth-2-face ((t (:foreground ,dt-yellow))))
