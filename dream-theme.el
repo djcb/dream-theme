@@ -85,11 +85,14 @@
 		   :weight bold :underline t))))
     `(cursor ((t (:background ,dt-yellow :foreground nil))))
     `(minibuffer-prompt ((t (:foreground ,dt-red :weight bold :background ,dt-bg-1))))
-    `(region ((t (:foreground nil :background ,dt-bg+2))))
+    `(region ((t (:foreground nil :background ,dt-yellow-3))))
     `(scroll-bar ((t (:background ,dt-bg+2))))
     `(secondary-selection ((t (:foreground nil :background ,dt-bg+2))))
     `(tool-bar ((t (:background ,dt-bg+2))))
 
+    ;; cua's rectangle mode
+    `(cua-rectangle ((t (:background ,dt-blue-5))))
+    
     ;; erc
     `(erc-action-face ((t (:foreground ,dt-red-1 :slant italic))))
     '(erc-bold-face ((t (:weight bold))))
@@ -109,16 +112,16 @@
     `(erc-prompt-face ((t (:weight bold :foreground ,dt-yellow))))
     `(erc-timestamp-face ((t (:foreground ,dt-green+1))))
     `(erc-input-face ((t (:foreground ,dt-yellow))))
-
+    
     ;; flyspell
     ;; wavy underlines, emacs 24.3+
     `(flyspell-incorrect ((t (:foreground ,dt-yellow :underline (:color ,dt-red :style wave)))))
-        
+
     ;; font-locking (ie., syntax highlighting)
     `(font-lock-builtin-face ((t (:foreground ,dt-blue))))
     `(font-lock-comment-face ((t (:foreground ,dt-green :slant italic))))
     `(font-lock-comment-delimiter-face ((t (:foreground ,dt-green+2))))
-    `(font-lock-constant-face ((t (:foreground ,dt-green+2))))
+    `(font-lock-constant-face ((t (:foreground ,dt-green+4 :weight bold))))
     `(font-lock-doc-face ((t (:foreground ,dt-green+1 :slant italic))))
     `(font-lock-doc-string-face ((t (:foreground ,dt-green+1 :slant italic))))
     `(font-lock-function-name-face ((t (:foreground ,dt-green+1 :weight bold))))
@@ -157,7 +160,9 @@
 
     ;; message-mode
     `(message-cited-text-face ((t (:inherit font-lock-comment))))
-    `(message-header-name-face ((t (:foregrond ,dt-green+1 :weight bold))))
+    `(message-header-name-face ((t (:foregrond ,dt-blue :weight bold))))
+    `(message-header-name ((t (:foregrond ,dt-blue :weight bold))))
+    `(message-header-key-face ((t (:foregrond ,dt-green+3 :weight bold))))
     `(message-header-other-face ((t (:foreground ,dt-green))))
     `(message-header-to-face ((t (:foreground ,dt-green+1))))
     `(message-header-from-face ((t (:foreground ,dt-green+2))))
@@ -169,14 +174,15 @@
     `(message-separator-face ((t (:foreground ,dt-green :background ,dt-bg+3))))
 
     ;; linum
-    `(linum ((t (:foreground ,dt-yellow-3 :background ,dt-bg :height .8))))
+    `(linum ((t (:foreground ,dt-yellow-3 :background ,dt-bg
+		  :height .8 :weight normal :slant normal :underline nil))))
 
     ;; one-key
     `(one-key-name ((t (:foreground ,dt-yellow))))
     `(one-key-keystroke ((t (:foreground ,dt-red))))
     `(one-key-prompt ((t (:foreground ,dt-green))))
-    
-    
+
+
     ;; rainbow-delimiters
     `(rainbow-delimiters-depth-1-face ((t (:foreground ,dt-cyan))))
     `(rainbow-delimiters-depth-2-face ((t (:foreground ,dt-yellow))))
