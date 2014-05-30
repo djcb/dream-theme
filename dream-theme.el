@@ -203,6 +203,9 @@
     `(show-paren-match ((t (:foreground ,nil :background ,dt-bg-1
 			     :underline t :weight normal))))
 
+    ;; which-function mode
+    `(which-func ((t (:foreground ,dt-yellow))))
+    
     ))
 
 (provide-theme 'dream)
