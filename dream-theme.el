@@ -23,6 +23,7 @@
 
 ;; my palette
 (let ( (dt-fg		"#dcdccc")
+       (dt-bg-3         "#777777")
        (dt-bg-2         "#232923")
        (dt-bg-1		"#2f2f2f")
        (dt-bg		"#151515")
@@ -119,11 +120,11 @@
 
     ;; font-locking (ie., syntax highlighting)
     `(font-lock-builtin-face ((t (:foreground ,dt-blue))))
-    `(font-lock-comment-face ((t (:foreground ,dt-green :slant italic))))
-    `(font-lock-comment-delimiter-face ((t (:foreground ,dt-green+2))))
+    `(font-lock-comment-face ((t (:foreground ,dt-bg-3 :slant italic))))
+    `(font-lock-comment-delimiter-face ((t (:foreground ,dt-bg-3))))
     `(font-lock-constant-face ((t (:foreground ,dt-green+4 :weight bold))))
-    `(font-lock-doc-face ((t (:foreground ,dt-green+1 :slant italic))))
-    `(font-lock-doc-string-face ((t (:foreground ,dt-green+1 :slant italic))))
+    `(font-lock-doc-face ((t (:foreground ,dt-bg-3 :slant italic))))
+    `(font-lock-doc-string-face ((t (:foreground ,dt-bg-3 :slant italic))))
     `(font-lock-function-name-face ((t (:foreground ,dt-green+1 :weight bold))))
     `(font-lock-keyword-face ((t (:foreground ,dt-red-1 :weight bold))))
     `(font-lock-negation-char-face ((t (:foreground ,dt-green-1))))
