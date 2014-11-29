@@ -1,10 +1,6 @@
-;; dream-theme -- dark, clean theme for emacs. inspired by the zenburn, sinburn
-;; and similar themes
-
+;;; dream-theme.el --- dark, clean theme for emacs. Inspired by the
+;;; zenburn, sinburn and similar themes
 ;; Copyright (C) 2013 Dirk-Jan C. Binnema
-
-;; Author: Dirk-Jan C. Binnema <djcb@djcbsoftware.nl>
-;; Created: 2013-01-27
 
 ;; This file is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -17,7 +13,15 @@
 ;; GNU General Public License for more details.
 ;; <http://www.gnu.org/licenses/>.
 
-;;; Code
+;; Author: Dirk-Jan C. Binnema <djcb@djcbsoftware.nl>
+;; Maintainer: Dirk-Jan C. Binnema <djcb@djcbsoftware.nl>
+;; URL: https://github.com/djcb/dream-theme
+;; Created: 2013-01-27
+;; Version: 0.1
+;; Keywords: theme
+
+
+;;; Code:
 
 (deftheme dream "The Dream Theme.")
 
@@ -93,7 +97,7 @@
 
     ;; cua's rectangle mode
     `(cua-rectangle ((t (:background ,dt-blue-5))))
-    
+
     ;; erc
     `(erc-action-face ((t (:foreground ,dt-red-1 :slant italic))))
     '(erc-bold-face ((t (:weight bold))))
@@ -113,7 +117,7 @@
     `(erc-prompt-face ((t (:weight bold :foreground ,dt-yellow))))
     `(erc-timestamp-face ((t (:foreground ,dt-green+1))))
     `(erc-input-face ((t (:foreground ,dt-yellow))))
-    
+
     ;; flyspell
     ;; wavy underlines, emacs 24.3+
     `(flyspell-incorrect ((t (:foreground ,dt-yellow :underline (:color ,dt-red :style wave)))))
@@ -206,7 +210,10 @@
 
     ;; which-function mode
     `(which-func ((t (:foreground ,dt-yellow))))
-    
+
     ))
 
 (provide-theme 'dream)
+
+
+;;; dream-theme.el ends here
