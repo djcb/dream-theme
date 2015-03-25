@@ -91,6 +91,9 @@
     `(secondary-selection ((t (:foreground nil :background ,dt-bg+2))))
     `(tool-bar ((t (:background ,dt-bg+2))))
 
+    ;; ace
+    `(ace-jump-face-foreground ((t (:foreground ,dt-blue :background ,dt-bg+1 :weight bold))))
+    
     ;; cua's rectangle mode
     `(cua-rectangle ((t (:background ,dt-blue-5))))
     
