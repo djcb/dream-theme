@@ -93,7 +93,11 @@
 
     ;; ace
     `(ace-jump-face-foreground ((t (:foreground ,dt-blue :background ,dt-bg+1 :weight bold))))
-    
+
+    ;; compilation
+    `(compilation-warning ((t (:foreground ,dt-orange :weight bold))))
+    `(compilation-info ((t (:foreground ,dt-green :weight bold))))
+        
     ;; cua's rectangle mode
     `(cua-rectangle ((t (:background ,dt-blue-5))))
     
@@ -161,6 +165,7 @@
     `(magit-item-highlight ((t (:foreground ,dt-blue
 				 :background ,dt-bg-1 :underline t))))
     `(magit-branch ((t (:foreground ,dt-green :background ,dt-bg-1 :box nil))))
+    `(magit-log-sha1 ((t (:foreground ,dt-yellow :background ,dt-bg-1 :box nil))))
 
     ;; message-mode
     `(message-cited-text-face ((t (:inherit font-lock-comment))))
@@ -178,8 +183,8 @@
     `(message-separator-face ((t (:foreground ,dt-green :background ,dt-bg+3))))
 
     ;; linum
-    `(linum ((t (:foreground ,dt-yellow-3 :background ,dt-bg
-		  :height .8 :weight normal :slant normal :underline nil))))
+    `(linum ((t (:foreground ,dt-green-1 :background ,dt-bg
+		  :height .9 :weight normal :slant normal :underline nil))))
 
     ;; one-key
     `(one-key-name ((t (:foreground ,dt-yellow))))
