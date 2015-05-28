@@ -4,6 +4,10 @@
 ;; Copyright (C) 2013 Dirk-Jan C. Binnema
 
 ;; Author: Dirk-Jan C. Binnema <djcb@djcbsoftware.nl>
+;; Version: 20130127
+;; Package-Requires: ((emacs "24"))
+;; Keywords: theme, deftheme
+;; URL: https://github.com/djcb/dream-theme
 ;; Created: 2013-01-27
 
 ;; This file is free software: you can redistribute it and/or modify
@@ -67,15 +71,15 @@
     '(underline ((t (:underline t))))
     `(fringe ((t (:background ,dt-bg-1))))
     `(header-line ((t (:box (:color ,dt-bg-1 :line-width 2)
-			:weight bold :foreground ,dt-blue-1
-			:background ,dt-green-4))))
+                        :weight bold :foreground ,dt-blue-1
+                        :background ,dt-green-4))))
     `(highlight ((t (:weight bold :underline t :background nil
-		      :foreground ,dt-orange))))
+                      :foreground ,dt-orange))))
     `(hover-highlight ((t (:underline t :foreground nil :background ,dt-green))))
     '(match ((t (:weight bold))))
     `(menu ((t (:background ,dt-bg+3))))
     `(mode-line ((t (:foreground nil :background ,dt-green-4
-		      :box (:color ,dt-bg-1 :line-width 2)))))
+                      :box (:color ,dt-bg-1 :line-width 2)))))
     `(mode-line-inactive ((t  (:inherit mode-line :background ,dt-green-1))))
     '(mouse ((t (:inherit dt-foreground))))
     '(paren ((t (:inherit dt-lowlight-1))))
@@ -83,7 +87,7 @@
     `(link ((t (:foreground ,dt-blue-3 :background nil :underline t))))
     `(border ((t (:background ,dt-bg))))
     `(button ((t (:foreground ,dt-yellow :background ,dt-blue-5
-		   :weight bold :underline t))))
+                   :weight bold :underline t))))
     `(cursor ((t (:background ,dt-yellow :foreground nil))))
     `(minibuffer-prompt ((t (:foreground ,dt-red :weight bold :background ,dt-bg-1))))
     `(region ((t (:foreground nil :background ,dt-yellow-3))))
@@ -97,10 +101,10 @@
     ;; compilation
     `(compilation-warning ((t (:foreground ,dt-orange :weight bold))))
     `(compilation-info ((t (:foreground ,dt-green :weight bold))))
-        
+
     ;; cua's rectangle mode
     `(cua-rectangle ((t (:background ,dt-blue-5))))
-    
+
     ;; erc
     `(erc-action-face ((t (:foreground ,dt-red-1 :slant italic))))
     '(erc-bold-face ((t (:weight bold))))
@@ -120,7 +124,7 @@
     `(erc-prompt-face ((t (:weight bold :foreground ,dt-yellow))))
     `(erc-timestamp-face ((t (:foreground ,dt-green+1))))
     `(erc-input-face ((t (:foreground ,dt-yellow))))
-    
+
     ;; flyspell
     ;; wavy underlines, emacs 24.3+
     `(flyspell-incorrect ((t (:foreground ,dt-yellow :underline (:color ,dt-red :style wave)))))
@@ -153,9 +157,9 @@
     `(info-menu-star ((t (:foreground ,dt-orange :weight normal))))
     `(info-menu-5 ((t (:inherit info-menu-star))))
     `(info-title-1 ((t (:foreground ,dt-blue :background nil
-			 :weight bold :height 1.2))))
+                         :weight bold :height 1.2))))
     `(info-title-2 ((t (:foreground ,dt-blue :background nil
-			 :weight bold :height 1.1))))
+                         :weight bold :height 1.1))))
     `(info-menu-header ((t (:weight normal :foreground ,dt-blue :height 1.2))))
     '(info-node ((t (:weight bold))))
     '(info-header-node ((t (:weight normal))))
@@ -163,7 +167,7 @@
     ;; magit
     `(magit-section-title ((t (:foreground ,dt-red :height 1.1 :weight normal))))
     `(magit-item-highlight ((t (:foreground ,dt-blue
-				 :background ,dt-bg-1 :underline t))))
+                                 :background ,dt-bg-1 :underline t))))
     `(magit-branch ((t (:foreground ,dt-green :background ,dt-bg-1 :box nil))))
     `(magit-log-sha1 ((t (:foreground ,dt-yellow :background ,dt-bg-1 :box nil))))
 
@@ -184,7 +188,7 @@
 
     ;; linum
     `(linum ((t (:foreground ,dt-green-1 :background ,dt-bg
-		  :height .9 :weight normal :slant normal :underline nil))))
+                  :height .9 :weight normal :slant normal :underline nil))))
 
     ;; one-key
     `(one-key-name ((t (:foreground ,dt-yellow))))
@@ -208,13 +212,13 @@
 
     ;; show-paren
     `(show-paren-mismatch ((t (:foreground ,dt-cyan :background ,dt-green
-				:weight bold :underline t))))
+                                :weight bold :underline t))))
     `(show-paren-match ((t (:foreground ,nil :background ,dt-bg-1
-			     :underline t :weight normal))))
+                             :underline t :weight normal))))
 
     ;; which-function mode
     `(which-func ((t (:foreground ,dt-yellow))))
-    
+
     ))
 
 (provide-theme 'dream)
