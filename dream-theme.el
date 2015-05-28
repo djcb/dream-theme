@@ -1,4 +1,4 @@
-;;; dream-theme.el -- dark, clean theme for emacs. inspired by the zenburn, sinburn and similar themes
+;;; dream-theme.el --- dark, clean theme for emacs. inspired by the zenburn, sinburn and similar themes
 
 ;; Copyright (C) 2013 Dirk-Jan C. Binnema
 
