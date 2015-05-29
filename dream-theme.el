@@ -1,7 +1,8 @@
-;; dream-theme -- dark, clean theme for emacs. inspired by the zenburn, sinburn
-;; and similar themes
+;; dream-theme -- dark, clean theme for emacs. inspired by the
+;; zenburn, sinburn and similar themes, but slowly diverging from
+;; them.
 
-;; Copyright (C) 2013 Dirk-Jan C. Binnema
+;; Copyright (C) 2013-2015 Dirk-Jan C. Binnema
 
 ;; Author: Dirk-Jan C. Binnema <djcb@djcbsoftware.nl>
 ;; Created: 2013-01-27
@@ -26,10 +27,12 @@
        (dt-bg-3         "#777777")
        (dt-bg-2         "#232923")
        (dt-bg-1		"#2f2f2f")
-       (dt-bg		"#151515")
+       (dt-bg		"#0d0e14")
        (dt-bg+1		"#202020")
        (dt-bg+2		"#303030")
        (dt-bg+3		"#101010")
+       (dt-bg+4		"#192425")
+
        (dt-red+1	"#dca3a3")
        (dt-red		"#cc9393")
        (dt-red-1	"#bc8383")
@@ -65,7 +68,7 @@
     '(fixed-pitch ((t (:weight bold))))
     '(italic ((t (:slant italic))))
     '(underline ((t (:underline t))))
-    `(fringe ((t (:background ,dt-bg-1))))
+    `(fringe ((t (:background ,dt-bg+3))))
     `(header-line ((t (:box (:color ,dt-bg-1 :line-width 2)
 			:weight bold :foreground ,dt-blue-1
 			:background ,dt-green-4))))
@@ -74,9 +77,9 @@
     `(hover-highlight ((t (:underline t :foreground nil :background ,dt-green))))
     '(match ((t (:weight bold))))
     `(menu ((t (:background ,dt-bg+3))))
-    `(mode-line ((t (:foreground nil :background ,dt-green-4
-		      :box (:color ,dt-bg-1 :line-width 2)))))
-    `(mode-line-inactive ((t  (:inherit mode-line :background ,dt-green-1))))
+    `(mode-line ((t (:foreground nil :background ,dt-bg+2
+		      :box (:color ,dt-bg+3 :line-width 2)))))
+    `(mode-line-inactive ((t  (:inherit mode-line :foreground ,dt-bg-3 :background ,dt-bg+3))))
     '(mouse ((t (:inherit dt-foreground))))
     '(paren ((t (:inherit dt-lowlight-1))))
     '(trailing-whitespace ((t (:inherit font-lock-warning))))
@@ -84,9 +87,9 @@
     `(border ((t (:background ,dt-bg))))
     `(button ((t (:foreground ,dt-yellow :background ,dt-blue-5
 		   :weight bold :underline t))))
-    `(cursor ((t (:background ,dt-yellow :foreground nil))))
+    `(cursor ((t (:background ,dt-cyan :foreground ,dt-magenta))))
     `(minibuffer-prompt ((t (:foreground ,dt-red :weight bold :background ,dt-bg-1))))
-    `(region ((t (:foreground nil :background ,dt-yellow-3))))
+    `(region ((t (:foreground nil :background ,dt-bg+4))))
     `(scroll-bar ((t (:background ,dt-bg+2))))
     `(secondary-selection ((t (:foreground nil :background ,dt-bg+2))))
     `(tool-bar ((t (:background ,dt-bg+2))))
@@ -126,7 +129,7 @@
     `(flyspell-incorrect ((t (:foreground ,dt-yellow :underline (:color ,dt-red :style wave)))))
 
     ;; font-locking (ie., syntax highlighting)
-    `(font-lock-builtin-face ((t (:foreground ,dt-blue))))
+    `(font-lock-builtin-face ((t (:foreground ,dt-blue :slant italic :weight bold))))
     `(font-lock-comment-face ((t (:foreground ,dt-bg-3 :slant italic))))
     `(font-lock-comment-delimiter-face ((t (:foreground ,dt-bg-3))))
     `(font-lock-constant-face ((t (:foreground ,dt-green+4 :weight bold))))
@@ -143,6 +146,19 @@
     `(font-lock-pseudo-keyword-face ((t (:foreground ,dt-red-2 :weight bold))))
     `(font-lock-operator-face ((t (:foreground ,dt-blue-1))))
 
+    
+    ;; helm
+    `(helm-source-header ((t (:foreground ,dt-blue :background ,dt-bg-2))))
+    `(helm-visible-mark ((t (:foreground ,dt-green  :background ,dt-bg-2))))
+    `(helm-header ((t (:foreground ,dt-yellow  :background ,dt-bg-2))))
+    `(helm-candidate-number ((t (:foreground ,dt-blue  :background ,dt-bg-2))))
+
+    `(helm-selection ((t (:foreground ,dt-blue :underline t :background ,dt-bg-1))))
+    `(helm-separator ((t (:foreground ,dt-cyan :background ,dt-bg-2))))
+    `(helm-action ((t (:foreground ,dt-blue :background ,dt-bg-2))))
+    `(helm-prefarg ((t (:foreground ,dt-green :background ,dt-bg-2))))
+    `(helm-match ((t (:foreground ,dt-orange :background ,dt-bg-2))))
+    
     ;; hlline
     `(hl-line ((t (:foreground nil :background ,dt-bg-2))))
 
@@ -183,14 +199,13 @@
     `(message-separator-face ((t (:foreground ,dt-green :background ,dt-bg+3))))
 
     ;; linum
-    `(linum ((t (:foreground ,dt-green-1 :background ,dt-bg
+    `(linum ((t (:foreground ,dt-green+2 :background ,dt-bg+3
 		  :height .9 :weight normal :slant normal :underline nil))))
 
     ;; one-key
     `(one-key-name ((t (:foreground ,dt-yellow))))
     `(one-key-keystroke ((t (:foreground ,dt-red))))
     `(one-key-prompt ((t (:foreground ,dt-green))))
-
 
     ;; rainbow-delimiters
     `(rainbow-delimiters-depth-1-face ((t (:foreground ,dt-cyan))))
@@ -212,6 +227,12 @@
     `(show-paren-match ((t (:foreground ,nil :background ,dt-bg-1
 			     :underline t :weight normal))))
 
+    ;; sunrise commander
+    `(sr-active-path-face ((t (:foreground ,dt-blue :background ,dt-bg+3
+				:height 1.2 :weight bold :underline t))))
+    `(sr-passive-path-face ((t (:foreground ,dt-blue
+				 :height 1.2 :weight normal :underline t))))
+    
     ;; which-function mode
     `(which-func ((t (:foreground ,dt-yellow))))
     
