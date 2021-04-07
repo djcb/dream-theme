@@ -1,9 +1,0 @@
-* Dream Theme
-
-  dream-theme is an emacs `deftheme` color-theme, optimized for long
-  emacs sessions. It is inspired by sinburn/zenburn etc. but is
-  darker; also, it's much smaller than those.
-  
-  I'm slowly adding modes / tweaks, so expect some changes still.
-  
-  For an example of how it looks: [[http://www.djcbsoftware.nl/dot-emacs.html][my .emacs]].
