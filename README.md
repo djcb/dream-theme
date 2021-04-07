@@ -6,5 +6,5 @@ package-specific faces.
 
 *dream-theme* is my work-horse theme, used during development for tools like https://github.com/djcb/mu.
 
-![dream-theme-screenshot](https://github.com/djcb/dream-theme/dream-theme-screenshot.png)
+![dream-theme-screenshot](https://github.com/djcb/dream-theme/blob/master/dream-theme-screenshot.png)
 
