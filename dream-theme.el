@@ -1,10 +1,10 @@
-; dream-theme --- theme for emacs
+; dream-theme --- Maximalist Nordic/Zenburn-inspired color theme for Emacs.  -*- lexical-binding:t -*-
 
 ;;; Commentary:
 ;; Dark, clean theme for Emacs. inspired by the zenburn, sinburn, Nord and similar
 ;; themes, but slowly diverging from them.
 
-;; Copyright (C) 2013-2020 Dirk-Jan C. Binnema
+;; Copyright (C) 2013-2021 Dirk-Jan C. Binnema
 
 ;; Author: Dirk-Jan C. Binnema <djcb@djcbsoftware.nl>
 ;; Created: 2013-01-27
