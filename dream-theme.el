@@ -1,13 +1,20 @@
-; dream-theme --- Maximalist Nordic/Zenburn-inspired color theme for Emacs.  -*- lexical-binding:t -*-
-
-;;; Commentary:
-;; Dark, clean theme for Emacs. inspired by the zenburn, sinburn, Nord and similar
-;; themes, but slowly diverging from them.
+;;; dream-theme.el --- Maximalist Nordic/Zenburn-inspired color theme -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2013-2021 Dirk-Jan C. Binnema
 
+;;; Commentary:
+;; Dark, clean theme for Emacs.  inspired by the zenburn, sinburn, Nord and similar
+;; themes, but slowly diverging from them.
+
+
 ;; Author: Dirk-Jan C. Binnema <djcb@djcbsoftware.nl>
 ;; Created: 2013-01-27
+;; Version: 1.0
+;; URL: https://github.com/djcb/dream-theme
+;; Package-Requires: ((emacs "26.1"))
+;; Keyworeds: faces. theme
+
+;; This file is not part of GNU Emacs.
 
 ;; This file is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -31,7 +38,7 @@
        (dt-fg            "#d8dee9")
 
        (dt-bg-1          "#21242b")
-       (dt-bg-11         "#020e03")
+       ;(dt-bg-11         "#020e03")
 
        ;; backgrounds (from nordic / polar night)
        (dt-bg-2          "#181b1f")
@@ -41,10 +48,10 @@
        (dt-bg-5          "#5c6373")
 
        ;; highlights from nordic / frost
-       (dt-bg-hl-1      "#8fbcbb")
+       ;;(dt-bg-hl-1      "#8fbcbb")
        (dt-bg-hl-2      "#88c0d0")
-       (dt-bg-hl-3      "#81a1c1")
-       (dt-bg-hl-4      "#5e81ac")
+       ;;(dt-bg-hl-3      "#81a1c1")
+       ;;(dt-bg-hl-4      "#5e81ac")
 
        (dt-red          "#b1616a")
        (dt-orange       "#d68955")
@@ -347,4 +354,4 @@
     ))
 
 (provide-theme 'dream)
-;;; dream-theme ends here
+;;; dream-theme.el ends here
