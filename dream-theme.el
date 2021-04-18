@@ -2,17 +2,12 @@
 
 ;; Copyright (C) 2013-2021 Dirk-Jan C. Binnema
 
-;;; Commentary:
-;; Dark, clean theme for Emacs.  inspired by the zenburn, sinburn, Nord and similar
-;; themes, but slowly diverging from them.
-
-
 ;; Author: Dirk-Jan C. Binnema <djcb@djcbsoftware.nl>
 ;; Created: 2013-01-27
 ;; Version: 1.0
 ;; URL: https://github.com/djcb/dream-theme
 ;; Package-Requires: ((emacs "26.1"))
-;; Keyworeds: faces. theme
+;; Keyworeds: faces.  theme
 
 ;; This file is not part of GNU Emacs.
 
@@ -26,6 +21,11 @@
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
 ;; <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+;; Dark, clean theme for Emacs.  inspired by the zenburn, sinburn, Nord and similar
+;; themes, but slowly diverging from them.
+
 
 ;;; Code:
 
@@ -354,4 +354,5 @@
     ))
 
 (provide-theme 'dream)
+(provide 'dream-theme)
 ;;; dream-theme.el ends here
