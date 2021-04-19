@@ -7,7 +7,7 @@
 ;; Version: 1.0
 ;; URL: https://github.com/djcb/dream-theme
 ;; Package-Requires: ((emacs "26.1"))
-;; Keyworeds: faces.  theme
+;; Keywords: faces, theme
 
 ;; This file is not part of GNU Emacs.
 
